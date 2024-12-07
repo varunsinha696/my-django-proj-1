@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<form method="post">
+    {% csrf_token %}
+    <h3>Proposed Changes:</h3>
+    <p>SSO Implemented: {{ temp_record.sso_implemented }}</p>
+    <p>SSO Date: {{ temp_record.sso_date }}</p>
+    <p>SSO Description: {{ temp_record.sso_description }}</p>
+
+    <textarea name="remarks" placeholder="Enter remarks"></textarea>
+    <button type="submit" name="action" value="Approve">Approve</button>
+    <button type="submit" name="action" value="Reject">Reject</button>
+</form>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>MFA Records</h2>
+<table class="table table-striped">
+    <tr>
+        <th>Product Name</th>
+        <th>Manager</th>
+        <th>Auditor</th>
+        <th>Decommissioned</th>
+        <th>MFA Implemented</th>
+        <th>MFA Date</th>
+    </tr>
+    {% for record in mfa_records %}
+    <tr>
+        <td>{{ record.product.product }}</td>
+        <td>{{ record.product.manager }}</td>
+        <td>{{ record.product.auditor }}</td>
+        <td>{{ record.product.decommissioned }}</td>
+        <td>{{ record.mfa_implemented }}</td>
+        <td>{{ record.mfa_date }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

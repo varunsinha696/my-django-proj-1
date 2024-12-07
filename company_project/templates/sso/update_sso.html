@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+<form method="post">
+    {% csrf_token %}
+    <div>
+        <label for="sso_implemented">SSO Implemented:</label>
+        <input type="checkbox" id="sso_implemented" name="sso_implemented" {% if temp_record.sso_implemented %}checked{% endif %}>
+    </div>
+    
+    <div>
+        <label for="sso_date">SSO Date:</label>
+        <input type="date" id="sso_date" name="sso_date" value="{{ temp_record.sso_date }}">
+    </div>
+    
+    <div>
+        <label for="sso_description">SSO Description:</label>
+        <textarea id="sso_description" name="sso_description">{{ temp_record.sso_description }}</textarea>
+    </div>
+    
+    <div>
+        <button type="submit">Submit</button>
+    </div>
+    
+</form>
+{% endblock %}

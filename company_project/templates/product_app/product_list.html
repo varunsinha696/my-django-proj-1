@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Product Info List</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Product Name</th>
+            <th>Manager</th>
+            <th>Auditor</th>
+            <th>Decommissioned</th>
+           
+        </tr>
+    </thead>
+    <tbody>
+        {% for product_value in products %}
+        <tr>
+            <td>{{ product_value.product }}</td>
+            <td>{{ product_value.manager.username }}</td>
+            <td>{{ product_value.auditor.username }}</td>
+            <td>{{ product_value.decommissioned }}</td>
+           
+            
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<a href="{% url 'product_create' %}" class="btn btn-primary">Add New Product</a>
+{% endblock %}

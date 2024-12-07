@@ -1,0 +1,61 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*$py.class
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+env/
+venv/
+myenv/
+ENV/
+.venv/
+.env/
+
+# Django migrations
+*.sqlite3
+db.sqlite3
+db.sqlite3-journal
+
+# Django static and media files
+staticfiles/
+media/
+*.log
+
+# Secrets
+.env
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+
+# macOS files
+.DS_Store
+
+# Logs and debug files
+*.log
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+
+# pip wheel build files
+*.whl
+
+# Node modules (if using Node.js with Django)
+node_modules/
+
+# pytest cache
+.pytest_cache/
+
+# Sphinx documentation
+docs/_build/
+
+# Distribution / packaging
+*.egg-info/
+dist/
+build/
+eggs/
